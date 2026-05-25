@@ -14,7 +14,6 @@ llm_client = Groq()
 
 router = APIRouter()
 
-
 async def conversation(user_query):
   # Step 1 - get the query from the user
   # make sure the user has access/credits to hit the endpoint
@@ -84,3 +83,4 @@ async def follow_up_query(user_query):
     follow_up_question(user_query),
     media_type="text/event-stream"
   )  
+  
