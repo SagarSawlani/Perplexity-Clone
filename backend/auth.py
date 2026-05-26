@@ -1,12 +1,14 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 from dotenv import load_dotenv
+from database.database import AsyncSession
+router = APIRouter()
 
-router = FastAPI()
+db = AsyncSession()
 
 # Signup
 @router.post("/signup")
-async def signup():
-  return
+async def signup()
+  return 
 
 # Signin
 @router.post("/signin")
