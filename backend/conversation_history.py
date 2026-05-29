@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine
 from database.database import session
@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 
-router = FastAPI()
+router = APIRouter()
 db = session()
 
 # Past convesations get

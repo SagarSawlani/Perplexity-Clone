@@ -19,6 +19,7 @@ class User(Base):
   email = Column(String, nullable=False)
   provider =  Column(Enum(AuthProvider), nullable=False)
   name = Column(String, nullable=False)
+  supabaseId = Column(String, nullable=False)
   conversations = relationship("Conversation", back_populates="user")
   messages = relationship("Message", back_populates="user")
 
